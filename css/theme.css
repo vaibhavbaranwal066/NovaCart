@@ -1,0 +1,17 @@
+/* ===== THEME VARIABLES ===== */
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --accent: #4f46e5;
+  --border: #e5e7eb;
+}
+
+/* DARK MODE */
+body.dark {
+  --bg: #0b1220;
+  --card: #121a2f;
+  --text: #f8fafc;
+  --accent: #22d3ee;
+  --border: #1f2937;
+}

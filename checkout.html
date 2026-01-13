@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout – NovaCart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo">NovaCart</h1>
+</header>
+
+<section class="checkout">
+
+  <!-- STEPS -->
+  <div class="steps">
+    <span class="active">Cart</span>
+    <span>Address</span>
+    <span>Payment</span>
+    <span>Done</span>
+  </div>
+
+  <!-- STEP 1: CART SUMMARY -->
+  <div class="step active" id="step1">
+    <h2>Order Summary</h2>
+    <div id="summaryItems"></div>
+    <button class="btn-primary" onclick="nextStep()">Continue</button>
+  </div>
+
+  <!-- STEP 2: ADDRESS -->
+  <div class="step" id="step2">
+    <h2>Delivery Address</h2>
+    <input placeholder="Full Name" id="name">
+    <input placeholder="Address">
+    <input placeholder="City">
+    <input placeholder="Pincode">
+    <button class="btn-primary" onclick="nextStep()">Continue</button>
+  </div>
+
+  <!-- STEP 3: PAYMENT -->
+  <div class="step" id="step3">
+    <h2>Payment</h2>
+    <label><input type="radio" checked> UPI</label><br>
+    <label><input type="radio"> Card</label><br>
+    <label><input type="radio"> Cash on Delivery</label><br><br>
+    <button class="btn-primary" onclick="nextStep()">Pay Now</button>
+  </div>
+
+  <!-- STEP 4: SUCCESS -->
+  <div class="step" id="step4">
+    <h2>🎉 Order Placed!</h2>
+    <p>Thank you for shopping with NovaCart.</p>
+    <button class="btn-primary" onclick="finish()">Go Home</button>
+  </div>
+
+</section>
+
+<script src="js/checkout.js"></script>
+</body>
+</html>
