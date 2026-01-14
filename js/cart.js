@@ -5,7 +5,13 @@ const cartCount = document.getElementById("cartCount");
 const cartItems = document.getElementById("cartItems");
 const cartTotal = document.getElementById("cartTotal");
 
-updateCartUI();
+function updateCartUI(){
+  const checkoutBtn = document.getElementById("checkoutBtn");
+if (checkoutBtn) {
+  checkoutBtn.disabled = cart.length === 0;
+}
+
+}
 
 function addToCart(product) {
   const existing = cart.find(item => item.id === product.id);
@@ -17,11 +23,13 @@ function addToCart(product) {
   }
 
   saveCart();
+  showToast("Added to cart", "success");
 }
 
 function removeFromCart(id) {
   cart = cart.filter(item => item.id !== id);
   saveCart();
+  showToast("Item removed", "info");
 }
 
 function changeQty(id, amount) {

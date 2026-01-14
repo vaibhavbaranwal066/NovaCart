@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product – NovaCart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo">NovaCart</h1>
+  <nav>
+    <button id="themeToggle">🌙</button>
+    <button onclick="toggleCart()">🛒 <span id="cartCount">0</span></button>
+  </nav>
+</header>
+
+<section class="product-detail">
+  <div class="gallery">
+    <img id="mainImage" src="" alt="Product Image">
+
+    <div class="thumbnails" id="thumbnails"></div>
+  </div>
+
+  <div class="details">
+    <span id="wishlistBtn" class="wishlist">🤍</span>
+    <h2 id="productName"></h2>
+    <p class="price">₹<span id="productPrice"></span></p>
+    <!-- DELIVERY -->
+<p class="delivery" id="deliveryEstimate"></p>
+
+<!-- PRICE BREAKDOWN -->
+<div class="price-box" id="priceBox"></div>
+
+<!-- RATING -->
+<div class="rating" id="rating"></div>
+
+<!-- STOCK -->
+<p class="stock" id="stock"></p>
+
+<!-- SIZE -->
+<div class="option-group">
+  <strong>Size:</strong>
+  <div id="sizeOptions"></div>
+</div>
+
+<!-- COLOR -->
+<div class="option-group">
+  <strong>Color:</strong>
+  <div id="colorOptions"></div>
+</div>
+
+<p class="desc">
+  Premium quality product with modern design and high durability.
+</p>
+
+<!-- REVIEWS -->
+<h3>Reviews</h3>
+<div id="reviews"></div>
+
+    <button class="btn-primary" id="addToCartBtn">Add to Cart</button>
+  </div>
+</section>
+<div id="toastContainer"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/wishlist.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/product.js"></script>
+
+</body>
+</html>

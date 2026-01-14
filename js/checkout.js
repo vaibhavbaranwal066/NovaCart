@@ -1,3 +1,10 @@
+if (cart.length === 0) {
+  showToast("Your cart is empty", "error");
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 1500);
+}
+
 let currentStep = 1;
 const steps = document.querySelectorAll(".step");
 const stepIndicators = document.querySelectorAll(".steps span");
@@ -22,10 +29,11 @@ summary.appendChild(totalDiv);
 function nextStep() {
   if (currentStep === 2) {
     const name = document.getElementById("name").value;
-    if (!name) {
-      alert("Please enter your name");
-      return;
-    }
+if (!name) {
+  showToast("Please enter your name", "error");
+  return;
+}
+
   }
 
   steps[currentStep - 1].classList.remove("active");
